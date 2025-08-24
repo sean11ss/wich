@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Green Witch Parallax Template</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+
+<style>
+    .fire-particles {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 5; /* Increased to avoid being covered */
+        overflow: hidden;
+    }
+    .fire-particles::before,
+    .fire-particles::after,
+    .fire-particles span {
+        content: '';
+        position: absolute;
+        width: 8px; /* Larger for visibility */
+        height: 8px;
+        background: rgba(255, 150, 0, 1); /* Fully opaque */
+        border-radius: 50%;
+        box-shadow: 0 0 15px 5px rgba(255, 100, 0, 0.8); /* Stronger glow */
+        animation: float 6s infinite ease-in-out, fade 3s infinite ease-in-out;
+    }
+    .fire-particles::after {
+        animation-delay: 1.5s;
+        background: rgba(255, 200, 0, 0.7);
+    }
+    .fire-particles span:nth-child(1) { animation-delay: 0.5s; left: 15%; top: 25%; }
+    .fire-particles span:nth-child(2) { animation-delay: 1s; left: 85%; top: 75%; }
+    .fire-particles span:nth-child(3) { animation-delay: 2s; left: 25%; top: 85%; }
+    .fire-particles span:nth-child(4) { animation-delay: 2.5s; left: 75%; top: 15%; }
+    .fire-particles span:nth-child(5) { animation-delay: 3s; left: 50%; top: 50%; }
+    .fire-particles span:nth-child(6) { animation-delay: 3.5s; left: 35%; top: 65%; }
+    @keyframes float {
+        0% { transform: translateY(0) translateX(0); }
+        50% { transform: translateY(-30px) translateX(15px); }
+        100% { transform: translateY(0) translateX(0); }
+    }
+    @keyframes fade {
+        0%, 100% { opacity: 0.4; box-shadow: 0 0 8px 2px rgba(255, 100, 0, 0.4); }
+        50% { opacity: 0.8; box-shadow: 0 0 16px 6px rgba(255, 100, 0, 0.7); }
+    }
+    /* Added CSS for smaller Buy Now buttons in the Gallery section */
+    .image-caption .shop-now-button {
+        display: inline-block;
+        padding: 6px 12px; /* Smaller padding */
+        font-size: 12px; /* Smaller font size */
+        text-align: center;
+        text-decoration: none;
+        margin-top: 8px; /* Space between caption and button */
+    }
+</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="fire-particles"></div>
+    <!-- Header Section -->
+    <header class="header">
+        <h1>Green Witch Studio</h1>
+        <nav>
+            <ul>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Home</a>
+                    <div class="dropdown-content">
+                        <a href="#home">Homepage</a>
+                        <a href="#services">Homepage Services</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Company</a>
+                    <div class="dropdown-content">
+                        <a href="test.html">Our Story</a>
+                        <a href="#get-in-touch">Get in Touch</a>
+                    </div>
+                </li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#mystical-gallery">Gallery</a></li>
+                <li><a href="#remote-healing">Remote Healing</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<!-- Parallax Section 1: Hero -->
+<section id="home" class="parallax-section hero">
+    <div class="overlay-content">
+        <!-- Left text and button -->
+        <div class="text-content">
+            <p class="just-landed">Just Landed</p>
+            <h2>NEW MOON</h2>
+            <h3>CARE KITS</h3>
+            <a href="#shop" class="shop-now-button">Shop Now</a>
+            <div class="date-time" id="date-time"></div>
+        </div>
+        <!-- Right image -->
+        <div class="overlay-image-container overlay-image-right">
+            <img src="elena-mozhvilo-vG_uILgo_FU-unsplash.jpg" alt="Hero Image" class="overlay-image" loading="lazy" />
+        </div>
+    </div>
+    <div class="divider-content">
+        <img src="path/to/icon1.png" alt="Icon 1" />
+    </div>
+    <!-- Banner with scrolling text and images -->
+    <div class="banner">
+        <div class="banner-content">
+            <span class="banner-item">
+                Shop by Collection
+                <img src="florian-pinkert-BJzH5RlODGQ-unsplash.jpg" alt="Banner Image" class="banner-image" />
+            </span>
+            <span class="banner-item">
+                Shop by Collection
+                <img src="flower remove.png" alt="Banner Image" class="banner-image" />
+            </span>
+            <span class="banner-item">
+                Shop by Collection
+                <img src="flower removew.png" alt="Banner Image" class="banner-image" />
+            </span>
+            <span class="banner-item">
+                Shop by Collection
+                <img src="flowert remove.png" alt="Banner Image" class="banner-image" />
+            </span>
+            <span class="banner-item">
+                Shop by Collection
+                <img src="flower remove u.png" alt="Banner Image" class="banner-image" />
+            </span>
+            <span class="banner-item">
+                Shop by Collection
+                <img src="flower remove.png" alt="Banner Image" class="banner-image" />
+            </span>
+            <span class="banner-item">
+                Shop by Collection
+                <img src="flower removew.png" alt="Banner Image" class="banner-image" />
+            </span>
+            <span class="banner-item">
+                Shop by Collection
+                <img src="flowert remove.png" alt="Banner Image" class="banner-image" />
+            </span>
+            <span class="banner-item">
+                Shop by Collection
+                <img src="flower remove u.png" alt="Banner Image" class="banner-image" />
+            </span>
+            <span class="banner-item">
+                Shop by Collection
+                <img src="flower remove.png" alt="Banner Image" class="banner-image" />
+            </span>
+        </div>
+    </div>
+</section>
+
+<!-- Parallax Section: Magic Boost -->
+<section id="magic-boost" class="parallax-section">
+    <div class="magic-boost-content">
+        <!-- Top half with four images and text stripe -->
+        <div class="top-half">
+            <div class="image-row">
+                <img src="flower remove.png" alt="Magic Image 1" class="magic-image" />
+                <img src="flower remove u.png" alt="Magic Image 2" class="magic-image" />
+                <img src="flowert remove.png" alt="Magic Image 3" class="magic-image" />
+                <img src="flower removew.png" alt="Magic Image 4" class="magic-image" />
+            </div>
+            <div class="stripe-text">NEW   IN       CRYSTALS      CLEANSING         GIFTS</div>
+        </div>
+        <!-- Bottom half with text and button -->
+        <div class="bottom-half">
+            <div class="text-content">
+                <h2>BOOST YOUR MAGIC WITH</h2>
+                <h3>GREEN WITCH</h3>
+                <p>Some Evil Queens wishfully found a few knights. The dazzling Aladdins...</p>
+                <a href="#about" class="shop-now-button">Learn More</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Parallax Section: Popular -->
+<section id="popular" class="parallax-section">
+    <div class="magic-boost-content">
+        <!-- Top half with four images -->
+        <div class="top-half">
+            <div class="image-row">
+                <img src="flower11.png" alt="Popular Image 1" class="magic-image" />
+                <img src="flower22.png" alt="Popular Image 2" class="magic-image" />
+                <img src="flower33.png" alt="Popular Image 3" class="magic-image" />
+                <img src="flower44.png" alt="Popular Image 4" class="magic-image" />
+            </div>
+        </div>
+        <!-- Bottom half with text and button -->
+        <div class="bottom-half">
+            <div class="text-content">
+                <h2>MOST POPULAR</h2>
+                <p>Give customers details about the banner image(s) or content on the template</p>
+                <a href="#shop" class="shop-now-button">SHOP NOW</a>
+            </div>
+        </div>
+    </div>
+    <!-- Banner with scrolling text and images -->
+    <div class="banner">
+        <div class="banner-content">
+            <span class="banner-item">
+                Shop by Collection
+                <img src="florian-pinkert-BJzH5RlODGQ-unsplash.jpg" alt="Banner Image" class="banner-image" />
+            </span>
+            <span class="banner-item">
+                Shop by Collection
+                <img src="flower remove.png" alt="Banner Image" class="banner-image" />
+            </span>
+            <span class="banner-item">
+                Shop by Collection
+                <img src="flower removew.png" alt="Banner Image" class="banner-image" />
+            </span>
+            <span class="banner-item">
+                Shop by Collection
+                <img src="flowert remove.png" alt="Banner Image" class="banner-image" />
+            </span>
+            <span class="banner-item">
+                Shop by Collection
+                <img src="flower remove u.png" alt="Banner Image" class="banner-image" />
+            </span>
+            <span class="banner-item">
+                Shop by Collection
+                <img src="flower remove.png" alt="Banner Image" class="banner-image" />
+            </span>
+            <span class="banner-item">
+                Shop by Collection
+                <img src="flower removew.png" alt="Banner Image" class="banner-image" />
+            </span>
+            <span class="banner-item">
+                Shop by Collection
+                <img src="flowert remove.png" alt="Banner Image" class="banner-image" />
+            </span>
+            <span class="banner-item">
+                Shop by Collection
+                <img src="flower remove u.png" alt="Banner Image" class="banner-image" />
+            </span>
+            <span class="banner-item">
+                Shop by Collection
+                <img src="flower remove.png" alt="Banner Image" class="banner-image" />
+            </span>
+        </div>
+    </div>
+</section>
+
+<!-- Parallax Section: Gallery -->
+<section id="gallery" class="parallax-section">
+    <div class="gallery-content">
+        <!-- Image row with three images, captions, and buttons -->
+        <div class="image-row">
+            <div class="image-caption">
+                <img src="kayla-maurais-9wceKsxnQTs-unsplash.jpg" alt="Gallery Image 1" class="gallery-image" />
+                <p>MOST POPULAR</p>
+                <a href="#shop" class="shop-now-button">Buy Now</a>
+            </div>
+            <div class="image-caption">
+                <img src="fernando-lavin-bot3mtgTUI8-unsplash.jpg" alt="Gallery Image 2" class="gallery-image" />
+                <p>IMAGE TITLE</p>
+                <a href="#shop" class="shop-now-button">Buy Now</a>
+            </div>
+            <div class="image-caption">
+                <img src="kayla-maurais-yAibvUJMMUY-unsplash.jpg" alt="Gallery Image 3" class="gallery-image" />
+                <p>IMAGE TITLE</p>
+                <a href="#shop" class="shop-now-button">Buy Now</a>
+            </div>
+        </div>
+        <!-- New div to hold the parallax background for the blank space with fade effect -->
+        <div class="parallax-spacer" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8) 20%, rgba(0, 0, 0, 0.8) 80%, rgba(0, 0, 0, 0)), url('kayla-maurais-9wceKsxnQTs-unsplash.jpg'); background-size: cover; background-position: center; background-attachment: fixed; height: 50vh; position: relative; z-index: 0;"></div>
+    </div>
+</section>
+
+<!-- Parallax Section: Mystical Gallery -->
+<section id="mystical-gallery" class="parallax-section">
+    <div class="gallery-content">
+        <h2>OUR MYSTICAL GALLERY</h2>
+        <div class="image-row">
+            <img src="altinay-dinc-LluELtL5mK4-unsplash.jpg" alt="Mystical Image 1" class="gallery-image" />
+            <img src="laura-c-GLnofHa3ZyU-unsplash.jpg" alt="Mystical Image 2" class="gallery-image" />
+            <img src="anastasia-vishnevetskaya-Z_fNpQhCuj0-unsplash.jpg" alt="Mystical Image 3" class="gallery-image" />
+        </div>
+    </div>
+    <div class="divider-content">
+        <img src="path/to/icon5.png" alt="Icon 5" />
+    </div>
+</section>
+
+<!-- Parallax Section: Remote Healing -->
+<section id="remote-healing" class="parallax-section">
+    <div class="remote-healing-content" style="display: flex; justify-content: space-between; align-items: stretch; min-height: 70vh; margin: 0; padding: 0;">
+        <!-- Left text and button -->
+        <div class="text-content" style="flex: 1; padding: 20px;">
+            <h2>REMOTE HEALING</h2>
+            <p>Experience the power of our remote healing sessions to restore balance and energy from anywhere.</p>
+            <a href="#book-healing" class="shop-now-button">Book Now</a>
+        </div>
+        <!-- Right image -->
+        <div class="remote-healing-image" style="flex: 1; margin: 0; padding: 0;">
+            <video src="invideo-ai-480 A Blue Meteor and the Forest Fairy 2025-07-07.mp4" alt="A Blue Meteor and the Forest Fairy" class="remote-healing-img" controls>
+              Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+    <div class="divider-content">
+        <img src="path/to/icon6.png" alt="Icon 6" />
+    </div>
+</section>
+
+<!-- Get in Touch Section -->
+<section id="get-in-touch" class="contact-section parallax-section">
+    <div class="contact-top" style="display: flex; justify-content: space-between; align-items: stretch; min-height: 70vh; margin: 0; padding: 0;">
+        <!-- Left image -->
+        <div class="contact-image-left" style="flex: 1; margin: 0; padding: 0;">
+            <img src="alexei-scutari-5Zg64OwXJg8-unsplash.jpg" alt="Contact Image" class="contact-image" loading="lazy" />
+        </div>
+        <!-- Right Contact Form -->
+        <div class="contact-form-container" style="flex: 1; padding: 20px;">
+            <h2>Get in Touch</h2>
+            <form class="contact-form">
+                <input type="text" placeholder="Name" required />
+                <input type="email" placeholder="Email" required />
+                <input type="tel" placeholder="Phone" />
+                <select required>
+                    <option value="" disabled selected>Subject</option>
+                    <option value="inquiry">General Inquiry</option>
+                    <option value="booking">Booking</option>
+                    <option value="other">Other</option>
+                </select>
+                <textarea placeholder="Message" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Social Section -->
+<section class="social-section">
+    <div class="social-content">
+        <div class="social-row">
+            <!-- Left Social Image with Text Below -->
+            <div class="social-link-left">
+                <a href="https://www.instagram.com/your-instagram-handle" target="_blank" class="social-image-link">
+                    <img src="3d-render-instagram-logo-icon-with-new-notification-isolated-on-transparent-background-free-png-removebg-preview.png" alt="Instagram Image" class="social-link-image" />
+                    <span class="social-link-text">Follow Instagram</span>
+                </a>
+            </div>
+            <!-- Centered Image -->
+            <div class="social-image">
+                <img src="11111111.png" alt="Social Image" class="social-image-img" />
+            </div>
+            <!-- Right Social Link with Form -->
+            <div class="social-link-right">
+                <form class="vip-signup-form">
+                    <input type="text" placeholder="First Name" required />
+                    <input type="text" placeholder="Last Name" required />
+                    <input type="email" placeholder="Email" required />
+                    <button type="submit">Join VIP List</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <p>© 2025 Green Witch Studio. All rights reserved.</p>
+</footer>
+
+<!-- Reference to script.js -->
+<script>
+    const particleContainer = document.querySelector('.fire-particles');
+    const particleCount = 12; // Increased for more particles
+    for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('span');
+        particle.style.left = `${Math.random() * 100}%`;
+        particle.style.top = `${Math.random() * 100}%`;
+        particle.style.animationDelay = `${Math.random() * 5}s`;
+        particleContainer.appendChild(particle);
+    }
+</script>
+    <div class="footer-text">jsut dropped 💜 gift sets 💜 shop now</div>
+</body>
+</html>
+
